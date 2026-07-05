@@ -3,7 +3,7 @@ requires = ["setuptools>=61"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "binspected"
+name = "HereIsYou"
 version = "0.1.1"
 description = "BInspected is a Python package for deep runtime introspection of Python objects, exposing constructor signatures, default values, annotations, docstrings, and structural metadata for modules, classes, functions, methods, and properties."
 readme = "README.md"
