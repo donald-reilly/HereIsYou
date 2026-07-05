@@ -1,8 +1,8 @@
 from pathlib import Path
 import json
 
-from binspected import BInspected
-import binspected
+from HereIsYou import You
+
 
 class DescriptorExample:
     """Simple descriptor to test descriptor behavior."""
@@ -112,7 +112,7 @@ def save_inspection(data, filename="test_inspections/inspection_output.json"):
         json.dump(data, f, indent=4, default= str)
     return path
 
-inspector = BInspected()
+inspector = You()
 test_class = GoldenClass()
-
-save_inspection(inspector(BInspected()), "examples/GoldenClassInstanceMethodOne.json")
+save_inspection(inspector(test_class), "CurrentWorkspace/HereIsYou/examples/GoldenClassInstanceMethodOne.json")
+save_inspection(inspector(Path), "/home/donald-reilly/DubsWorkspace/CurrentWorkspace/HereIsYou/examples/thisone.json")

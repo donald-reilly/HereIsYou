@@ -1,0 +1,801 @@
+{
+    "name": "Path",
+    "qualified name": "Path",
+    "module name": "pathlib",
+    "bases": [
+        "<class 'pathlib.PurePath'>"
+    ],
+    "doc string": "PurePath subclass that can make system calls.\n\n    Path represents a filesystem path but unlike PurePath, also offers\n    methods to do system calls on path objects. Depending on your system,\n    instantiating a Path will return either a PosixPath or a WindowsPath\n    object. You can also instantiate a PosixPath or WindowsPath directly,\n    but cannot instantiate a WindowsPath on a POSIX system or vice versa.\n    ",
+    "type hints": {},
+    "children": {
+        "module": {},
+        "class": {},
+        "method": {},
+        "function": {
+            "stat": {
+                "name": "stat",
+                "qualified name": "Path.stat",
+                "module name": "pathlib",
+                "doc string": "\n        Return the result of the stat() system call on this path, like\n        os.stat() does.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "lstat": {
+                "name": "lstat",
+                "qualified name": "Path.lstat",
+                "module name": "pathlib",
+                "doc string": "\n        Like stat(), except if the path points to a symlink, the symlink's\n        status information is returned, rather than its target's.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "exists": {
+                "name": "exists",
+                "qualified name": "Path.exists",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path exists.\n\n        This method normally follows symlinks; to check whether a symlink exists,\n        add the argument follow_symlinks=False.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_dir": {
+                "name": "is_dir",
+                "qualified name": "Path.is_dir",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a directory.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_file": {
+                "name": "is_file",
+                "qualified name": "Path.is_file",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a regular file (also True for symlinks pointing\n        to regular files).\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_mount": {
+                "name": "is_mount",
+                "qualified name": "Path.is_mount",
+                "module name": "pathlib",
+                "doc string": "\n        Check if this path is a mount point\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_symlink": {
+                "name": "is_symlink",
+                "qualified name": "Path.is_symlink",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a symbolic link.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_junction": {
+                "name": "is_junction",
+                "qualified name": "Path.is_junction",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a junction.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_block_device": {
+                "name": "is_block_device",
+                "qualified name": "Path.is_block_device",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a block device.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_char_device": {
+                "name": "is_char_device",
+                "qualified name": "Path.is_char_device",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a character device.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_fifo": {
+                "name": "is_fifo",
+                "qualified name": "Path.is_fifo",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a FIFO.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "is_socket": {
+                "name": "is_socket",
+                "qualified name": "Path.is_socket",
+                "module name": "pathlib",
+                "doc string": "\n        Whether this path is a socket.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "samefile": {
+                "name": "samefile",
+                "qualified name": "Path.samefile",
+                "module name": "pathlib",
+                "doc string": "Return whether other_path is the same or not as this file\n        (as returned by os.path.samefile()).\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "other_path",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "open": {
+                "name": "open",
+                "qualified name": "Path.open",
+                "module name": "pathlib",
+                "doc string": "\n        Open the file pointed by this path and return a file object, as\n        the built-in open() function does.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "mode",
+                        "default": "r",
+                        "type": null
+                    },
+                    {
+                        "name": "buffering",
+                        "default": -1,
+                        "type": null
+                    },
+                    {
+                        "name": "encoding",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "errors",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "newline",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "read_bytes": {
+                "name": "read_bytes",
+                "qualified name": "Path.read_bytes",
+                "module name": "pathlib",
+                "doc string": "\n        Open the file in bytes mode, read it, and close the file.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "read_text": {
+                "name": "read_text",
+                "qualified name": "Path.read_text",
+                "module name": "pathlib",
+                "doc string": "\n        Open the file in text mode, read it, and close the file.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "encoding",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "errors",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "write_bytes": {
+                "name": "write_bytes",
+                "qualified name": "Path.write_bytes",
+                "module name": "pathlib",
+                "doc string": "\n        Open the file in bytes mode, write to it, and close the file.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "data",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "write_text": {
+                "name": "write_text",
+                "qualified name": "Path.write_text",
+                "module name": "pathlib",
+                "doc string": "\n        Open the file in text mode, write to it, and close the file.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "data",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "encoding",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "errors",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "newline",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "iterdir": {
+                "name": "iterdir",
+                "qualified name": "Path.iterdir",
+                "module name": "pathlib",
+                "doc string": "Yield path objects of the directory contents.\n\n        The children are yielded in arbitrary order, and the\n        special entries '.' and '..' are not included.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_scandir": {
+                "name": "_scandir",
+                "qualified name": "Path._scandir",
+                "module name": "pathlib",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_make_child_relpath": {
+                "name": "_make_child_relpath",
+                "qualified name": "Path._make_child_relpath",
+                "module name": "pathlib",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "name",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "glob": {
+                "name": "glob",
+                "qualified name": "Path.glob",
+                "module name": "pathlib",
+                "doc string": "Iterate over this subtree and yield all existing files (of any\n        kind, including directories) matching the given relative pattern.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "pattern",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "rglob": {
+                "name": "rglob",
+                "qualified name": "Path.rglob",
+                "module name": "pathlib",
+                "doc string": "Recursively yield all existing files (of any kind, including\n        directories) matching the given relative pattern, anywhere in\n        this subtree.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "pattern",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "walk": {
+                "name": "walk",
+                "qualified name": "Path.walk",
+                "module name": "pathlib",
+                "doc string": "Walk the directory tree from this directory, similar to os.walk().",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "top_down",
+                        "default": true,
+                        "type": null
+                    },
+                    {
+                        "name": "on_error",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "follow_symlinks",
+                        "default": false,
+                        "type": null
+                    }
+                ]
+            },
+            "__init__": {
+                "name": "__init__",
+                "qualified name": "Path.__init__",
+                "module name": "pathlib",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "__enter__": {
+                "name": "__enter__",
+                "qualified name": "Path.__enter__",
+                "module name": "pathlib",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "__exit__": {
+                "name": "__exit__",
+                "qualified name": "Path.__exit__",
+                "module name": "pathlib",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "t",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "v",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "tb",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "absolute": {
+                "name": "absolute",
+                "qualified name": "Path.absolute",
+                "module name": "pathlib",
+                "doc string": "Return an absolute version of this path by prepending the current\n        working directory. No normalization or symlink resolution is performed.\n\n        Use resolve() to get the canonical path to a file.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "resolve": {
+                "name": "resolve",
+                "qualified name": "Path.resolve",
+                "module name": "pathlib",
+                "doc string": "\n        Make the path absolute, resolving all symlinks on the way and also\n        normalizing it.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "strict",
+                        "default": false,
+                        "type": null
+                    }
+                ]
+            },
+            "owner": {
+                "name": "owner",
+                "qualified name": "Path.owner",
+                "module name": "pathlib",
+                "doc string": "\n        Return the login name of the file owner.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "group": {
+                "name": "group",
+                "qualified name": "Path.group",
+                "module name": "pathlib",
+                "doc string": "\n        Return the group name of the file gid.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "readlink": {
+                "name": "readlink",
+                "qualified name": "Path.readlink",
+                "module name": "pathlib",
+                "doc string": "\n        Return the path to which the symbolic link points.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "touch": {
+                "name": "touch",
+                "qualified name": "Path.touch",
+                "module name": "pathlib",
+                "doc string": "\n        Create this file with the given access mode, if it doesn't exist.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "mode",
+                        "default": 438,
+                        "type": null
+                    },
+                    {
+                        "name": "exist_ok",
+                        "default": true,
+                        "type": null
+                    }
+                ]
+            },
+            "mkdir": {
+                "name": "mkdir",
+                "qualified name": "Path.mkdir",
+                "module name": "pathlib",
+                "doc string": "\n        Create a new directory at this given path.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "mode",
+                        "default": 511,
+                        "type": null
+                    },
+                    {
+                        "name": "parents",
+                        "default": false,
+                        "type": null
+                    },
+                    {
+                        "name": "exist_ok",
+                        "default": false,
+                        "type": null
+                    }
+                ]
+            },
+            "chmod": {
+                "name": "chmod",
+                "qualified name": "Path.chmod",
+                "module name": "pathlib",
+                "doc string": "\n        Change the permissions of the path, like os.chmod().\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "mode",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "lchmod": {
+                "name": "lchmod",
+                "qualified name": "Path.lchmod",
+                "module name": "pathlib",
+                "doc string": "\n        Like chmod(), except if the path points to a symlink, the symlink's\n        permissions are changed, rather than its target's.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "mode",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "unlink": {
+                "name": "unlink",
+                "qualified name": "Path.unlink",
+                "module name": "pathlib",
+                "doc string": "\n        Remove this file or link.\n        If the path is a directory, use rmdir() instead.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "missing_ok",
+                        "default": false,
+                        "type": null
+                    }
+                ]
+            },
+            "rmdir": {
+                "name": "rmdir",
+                "qualified name": "Path.rmdir",
+                "module name": "pathlib",
+                "doc string": "\n        Remove this directory.  The directory must be empty.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "rename": {
+                "name": "rename",
+                "qualified name": "Path.rename",
+                "module name": "pathlib",
+                "doc string": "\n        Rename this path to the target path.\n\n        The target path may be absolute or relative. Relative paths are\n        interpreted relative to the current working directory, *not* the\n        directory of the Path object.\n\n        Returns the new Path instance pointing to the target path.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "target",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "replace": {
+                "name": "replace",
+                "qualified name": "Path.replace",
+                "module name": "pathlib",
+                "doc string": "\n        Rename this path to the target path, overwriting if that path exists.\n\n        The target path may be absolute or relative. Relative paths are\n        interpreted relative to the current working directory, *not* the\n        directory of the Path object.\n\n        Returns the new Path instance pointing to the target path.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "target",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "symlink_to": {
+                "name": "symlink_to",
+                "qualified name": "Path.symlink_to",
+                "module name": "pathlib",
+                "doc string": "\n        Make this path a symlink pointing to the target path.\n        Note the order of arguments (link, target) is the reverse of os.symlink.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "target",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "target_is_directory",
+                        "default": false,
+                        "type": null
+                    }
+                ]
+            },
+            "hardlink_to": {
+                "name": "hardlink_to",
+                "qualified name": "Path.hardlink_to",
+                "module name": "pathlib",
+                "doc string": "\n        Make this path a hard link pointing to the same file as *target*.\n\n        Note the order of arguments (self, target) is the reverse of os.link's.\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "target",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "expanduser": {
+                "name": "expanduser",
+                "qualified name": "Path.expanduser",
+                "module name": "pathlib",
+                "doc string": " Return a new path with expanded ~ and ~user constructs\n        (as returned by os.path.expanduser)\n        ",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            }
+        },
+        "property": {},
+        "instance": {}
+    }
+}

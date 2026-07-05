@@ -1,404 +1,342 @@
 {
-    "module name": "binspected.introspection",
-    "doc string": "\nBInspected: A recursive Python object introspection engine.\n\nThis module provides the BInspected class, which classifies Python\nobjects, extracts metadata, groups children, and recursively builds\na structured introspection dictionary.\n",
-    "Instance Variables": {
-        "dispatcher": {
-            "module": "<bound method BInspected._inspect_module of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "class": "<bound method BInspected._inspect_class of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "method": "<bound method BInspected._inspect_method of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "instance": "<bound method BInspected._inspect_class_instance of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "property": "<bound method BInspected._inspect_property of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "built-in": "<bound method BInspected._inspect_built_in of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>",
-            "function": "<bound method BInspected._inspect_function of <binspected.introspection.BInspected object at 0x7ad5a7b45310>>"
-        },
-        "classifier": "<binspected.classifier.Classifier object at 0x7ad5a7b45450>",
-        "parser": "<binspected.parser.Parser object at 0x7ad5a7b45590>"
+    "module name": "__main__",
+    "doc string": "A fully loaded class for introspection testing.",
+    "type hints": {
+        "another_class_variable": "<class 'int'>"
     },
-    "name": "BInspected",
-    "qualified name": "BInspected",
+    "Instance Variables": {
+        "instance_var": "I am an instance variable",
+        "_private_var": "I am private",
+        "x": 5,
+        "y": "hello",
+        "args": [],
+        "kwargs": {}
+    },
+    "name": "GoldenClass",
+    "qualified name": "GoldenClass",
     "bases": [
-        "<class 'object'>"
+        "<class '__main__.GoldenBase'>"
     ],
-    "type hints": {},
     "children": {
         "module": {},
-        "class": {},
+        "class": {
+            "Nested": {
+                "name": "Nested",
+                "qualified name": "GoldenClass.Nested",
+                "module name": "__main__",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Nested class inside GoldenClass.",
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "nested_method": {
+                            "name": "nested_method",
+                            "qualified name": "GoldenClass.Nested.nested_method",
+                            "module name": "__main__",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        },
         "method": {},
         "function": {
             "__init__": {
                 "name": "__init__",
-                "qualified name": "BInspected.__init__",
-                "module name": "binspected.introspection",
-                "doc string": "\nInitializes the BInspected class.\n",
+                "qualified name": "GoldenClass.__init__",
+                "module name": "__main__",
+                "doc string": null,
+                "type hints": {
+                    "x": "<class 'int'>",
+                    "y": "<class 'str'>"
+                },
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "x",
+                        "default": 5,
+                        "type": "<class 'int'>"
+                    },
+                    {
+                        "name": "y",
+                        "default": "hello",
+                        "type": "<class 'str'>"
+                    }
+                ]
+            },
+            "method_one": {
+                "name": "method_one",
+                "qualified name": "GoldenClass.method_one",
+                "module name": "__main__",
+                "doc string": "This is method one",
+                "type hints": {
+                    "param2": "<class 'int'>",
+                    "return": "<class 'str'>"
+                },
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "param1",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "param2",
+                        "default": 10,
+                        "type": "<class 'int'>"
+                    }
+                ]
+            },
+            "method_two": {
+                "name": "method_two",
+                "qualified name": "GoldenClass.method_two",
+                "module name": "__main__",
+                "doc string": "Method with complex signature",
                 "type hints": {},
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        }
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
                     },
-                    "Local Variables": [],
-                    "return type": "None"
-                }
+                    {
+                        "name": "a",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "b",
+                        "default": 3,
+                        "type": null
+                    }
+                ]
             },
-            "__call__": {
-                "name": "__call__",
-                "qualified name": "BInspected.__call__",
-                "module name": "binspected.introspection",
-                "doc string": "\nClassify an object and return it's introspection dictionary.\n\nParams:\n    object_to_inspect: Object to be inspected.\nReturns:\n    An introspection dictionary.\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [],
-                    "return type": "<class 'dict'>"
-                }
+            "create_nested": {
+                "name": "create_nested",
+                "qualified name": "GoldenClass.create_nested",
+                "module name": "__main__",
+                "doc string": "Returns an instance of the nested class.",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
             },
-            "_build_inspection": {
-                "name": "_build_inspection",
-                "qualified name": "BInspected._build_inspection",
-                "module name": "binspected.introspection",
-                "doc string": "\nComplete object inspection and formation of the objects underlying structure\n\nParams:\n    object_to_inspect: Object to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        }
+            "lambda_factory": {
+                "name": "lambda_factory",
+                "qualified name": "GoldenClass.lambda_factory",
+                "module name": "__main__",
+                "doc string": "Returns a lambda function.",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            }
+        },
+        "property": {
+            "my_property": {
+                "doc string": "This is a property",
+                "getter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "__main__",
+                    "doc string": "This is a property",
+                    "type hints": {
+                        "return": "<class 'str'>"
                     },
-                    "Local Variables": [
-                        "object_type",
-                        "parsed_object"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_group_children": {
-                "name": "_group_children",
-                "qualified name": "BInspected._group_children",
-                "module name": "binspected.introspection",
-                "doc string": "\nSort an objects __dict__\n\nParams:\n    dict_to_group: __dict__ of the object that needs sorting\nReturns:\n    A dictionary of the sorted objects. Example structure:\n    grouped_dict ={\n        \"module\": {},\n        \"class\": {},\n        \"method\": {},\n        \"function\": {},\n        \"property\": {},\n        \"instance\": {}\n    }\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "dict_to_group": {
-                            "type": "None",
-                            "default value": "None"
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
                         }
-                    },
-                    "Local Variables": [
-                        "skip_children",
-                        "grouped_dict",
-                        "key",
-                        "value",
-                        "object_type"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_get_children": {
-                "name": "_get_children",
-                "qualified name": "BInspected._get_children",
-                "module name": "binspected.introspection",
-                "doc string": "\nGets the children objects and recursively sorts and produces dictionaries.\n\nParams:\n    object_to_get_children: The object whose children need sorting and parsing.\nReturns:\n    The parsed dictionary of each child object.\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
+                    ]
                 },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_to_get_children": {
-                            "type": "None",
-                            "default value": "None"
-                        }
+                "setter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "__main__",
+                    "doc string": "Setter for my_property",
+                    "type hints": {
+                        "value": "<class 'str'>",
+                        "other_value": "<class 'str'>",
+                        "return": null
                     },
-                    "Local Variables": [
-                        "children_dict",
-                        "children_objects",
-                        "object_name",
-                        "object_ref"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_module": {
-                "name": "_inspect_module",
-                "qualified name": "BInspected._inspect_module",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a modules underlying data structure and provide an introspection dictionary.\n\nParams:\n    module_to_inspect: Module to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
+                        },
+                        {
+                            "name": "value",
+                            "default": "that",
+                            "type": "<class 'str'>"
+                        },
+                        {
+                            "name": "other_value",
+                            "default": "this",
+                            "type": "<class 'str'>"
+                        }
+                    ]
                 },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "module_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
+                "deleter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "__main__",
+                    "doc string": "Deleter for my_property",
+                    "type hints": {
+                        "return": null
                     },
-                    "Local Variables": [
-                        "module_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_class": {
-                "name": "_inspect_class",
-                "qualified name": "BInspected._inspect_class",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a class' underlying data structure and provide an introspection dictionary.\n\nParams:\n    class_to_inspect: Class to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "class_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
                         }
-                    },
-                    "Local Variables": [
-                        "class_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_class_instance": {
-                "name": "_inspect_class_instance",
-                "qualified name": "BInspected._inspect_class_instance",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect an instances underlying data structure and provide an introspection dictionary.\n\nParams:\n    instance_to_inspect: instance to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "instance_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [
-                        "instance_dict",
-                        "class_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_method": {
-                "name": "_inspect_method",
-                "qualified name": "BInspected._inspect_method",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a methods underlying data structure and provide an introspection dictionary.\n\nParams:\n    method_to_inspect: Method to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "method_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [
-                        "method_dict",
-                        "function_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_function": {
-                "name": "_inspect_function",
-                "qualified name": "BInspected._inspect_function",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a functions underlying data structure and provide an introspection dictionary.\n\nParams:\n    function_to_inspect: Function to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "function_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [
-                        "function_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_property": {
-                "name": "_inspect_property",
-                "qualified name": "BInspected._inspect_property",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a property's underlying data structure and provide an introspection dictionary.\n\nParams:\n    property_to_inspect: Property to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "property_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [
-                        "property_dict"
-                    ],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_built_in": {
-                "name": "_inspect_built_in",
-                "qualified name": "BInspected._inspect_built_in",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect the built_in underlying data structure and provide an introspection dictionary.\n\nParams:\n    built_in_to_inspect: built_in to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "instance_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_arguments": {
-                "name": "_inspect_arguments",
-                "qualified name": "BInspected._inspect_arguments",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect an arguments underlying data structure and provide an introspection dictionary.\n\nParams:\n    argument_to_inspect: Argument to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "arguments_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [],
-                    "return type": "<class 'dict'>"
-                }
-            },
-            "_inspect_variables": {
-                "name": "_inspect_variables",
-                "qualified name": "BInspected._inspect_variables",
-                "module name": "binspected.introspection",
-                "doc string": "\nInspect a variables underlying data structure and provide an introspection dictionary.\n\nParams:\n    variable_to_inspect: Variable to inspect\nReturns:\n    An introspection dictionary\n",
-                "type hints": {
-                    "return": "<class 'dict'>"
-                },
-                "variables": {
-                    "arguments": {
-                        "self": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "variables_to_inspect": {
-                            "type": "None",
-                            "default value": "None"
-                        },
-                        "object_type": {
-                            "type": "None",
-                            "default value": "None"
-                        }
-                    },
-                    "Local Variables": [],
-                    "return type": "<class 'dict'>"
+                    ]
                 }
             }
         },
-        "property": {},
-        "instance": {}
+        "instance": {
+            "descriptor_field": {
+                "module name": "__main__",
+                "doc string": "Simple descriptor to test descriptor behavior.",
+                "Instance Variables": {
+                    "name": "descriptor_field"
+                },
+                "name": "DescriptorExample",
+                "qualified name": "DescriptorExample",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "DescriptorExample.__init__",
+                            "module name": "__main__",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__get__": {
+                            "name": "__get__",
+                            "qualified name": "DescriptorExample.__get__",
+                            "module name": "__main__",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "owner",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__set__": {
+                            "name": "__set__",
+                            "qualified name": "DescriptorExample.__set__",
+                            "module name": "__main__",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "value",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__delete__": {
+                            "name": "__delete__",
+                            "qualified name": "DescriptorExample.__delete__",
+                            "module name": "__main__",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        }
     }
 }
