@@ -1,6 +1,7 @@
-from HereIsYou.classifier import Classifier
-from HereIsYou.parser import Parser
+from HereIsYou import Classifier
+from HereIsYou import Parser
 import pprint
+
 # BUG Empty fields shouldn't show in json.
 
 # WORK CLI needs to be done. Should be able to run and inspect files seperately.
