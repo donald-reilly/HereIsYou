@@ -1,5 +1,5 @@
-from HereIsYou import Classifier
-from HereIsYou import Parser
+from .classifier import Classifier
+from  .parser import Parser
 import pprint
 
 # BUG Empty fields shouldn't show in json.
