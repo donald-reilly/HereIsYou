@@ -1,8 +1,3 @@
-from pathlib import Path
-import json
-
-from HereIsYou import You
-
 
 class DescriptorExample:
     """Simple descriptor to test descriptor behavior."""
@@ -18,14 +13,12 @@ class DescriptorExample:
     def __delete__(self, instance):
         del instance.__dict__[self.name]
 
-
 class GoldenBase:
     """Base class to test inheritance."""
     base_class_variable = 42
 
     def base_method(self):
         return "Base method called"
-
 
 class GoldenClass(GoldenBase):
     """A fully loaded class for introspection testing."""
@@ -104,15 +97,3 @@ class GoldenClass(GoldenBase):
     def lambda_factory(self):
         """Returns a lambda function."""
         return lambda z: z * 2
-
-
-def save_inspection(data, filename="test_inspections/inspection_output.json"):
-    path = Path(filename)
-    with path.open("w", encoding="utf-8") as f:
-        json.dump(data, f, indent=4, default= str)
-    return path
-
-inspector = You()
-test_class = GoldenClass()
-save_inspection(inspector(test_class), "CurrentWorkspace/HereIsYou/examples/GoldenClassInstanceMethodOne.json")
-save_inspection(inspector(Path), "/home/donald-reilly/DubsWorkspace/CurrentWorkspace/HereIsYou/examples/thisone.json")
