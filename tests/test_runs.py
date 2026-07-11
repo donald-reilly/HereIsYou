@@ -1,49 +1,37 @@
+from FilePaths.file_paths import add_date_time, add_version
+from HereIsYou import You
+
 from utilities.custom_class import DescriptorExample, GoldenBase, GoldenClass
 from utilities.tkinter_window import MiniDesktopApp
-from HereIsYou import You
-from pprint import pprint
 
-cls_definitions = (MiniDesktopApp, DescriptorExample, GoldenBase, GoldenClass)
+from pathlib import Path
+from importlib.metadata import metadata
 
-cls_instances = (
-    MiniDesktopApp(),
-    DescriptorExample(name = "test_name"), 
-    GoldenBase(), 
-    GoldenClass()
-    )
+def get_object_name(object_to_inspect):
 
-inspector = You()
+    try:
+        object_name = object_to_inspect.__name__
+        return object_name
 
-def test_class(test_definition):
-        
-        try:
-            name = test_definition.__qualname__
-            return name, inspector(test_definition)
-        
-        except AttributeError:
-            name = test_definition.__class__.__qualname__
-            return name, inspector(test_definition)
+    except AttributeError:
+        object_name = object_to_inspect.__class.__name__
+        return object_name
 
-def inspect_class():
-    """
-    Damn my dumb ass brain us making this so much harder than it needs to be.
-    Grow up bro, stop over complicating shit all the time.
-    This isn't even hard, why you being dumb.
-    """
-    for total_test in range(0, 4):
+def create_inspection(object_to_inspect):
 
-        name, inspection = test_class(cls_definitions[total_test])
-        def_inspections[name] = inspection
+    new_inspector = You()
+    new_inspection = new_inspector(object_to_inspect)
 
-        name, inspection = test_class(cls_instances[total_test])
-        instance_inpsect[name] = inspection
+    object_name = get_object_name(object_to_inspect)
 
-instance_inpsect = {}
-def_inspections = {} 
+    folder = add_date_time(None, month = True, day = True, year = True)
+    file_name = add_date_time(object_name, hour = True, minute = True) + ".md"
 
-inspections = {
-     "Instance Inspections": instance_inpsect,
-     "Definition Inspections": def_inspections
-}
-inspect_class()
+    new_inspection_file_name = Path(__file__).parents[0] /folder / file_name 
 
+    return new_inspection, new_inspection_file_name
+
+if __name__ == "__main__":
+    new_inspection, new_inspection_file_name = create_inspection(MiniDesktopApp)
+    print(new_inspection_file_name)
+   

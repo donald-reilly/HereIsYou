@@ -49,7 +49,8 @@ class You:
 
     def _build_inspection(self, object_to_inspect) -> dict:
         """
-        Complete object inspection and formation of the objects underlying structure
+        Complete object inspection and formation of the objects underlying 
+        structure
 
         Params:
             object_to_inspect: Object to inspect
@@ -58,7 +59,8 @@ class You:
         """
 
         object_type = self.classifier(object_to_inspect)
-        parsed_object = self.dispatcher[object_type](object_to_inspect, object_type)
+        parsed_object = self.dispatcher[object_type](object_to_inspect, 
+                                                     object_type)
 
         return parsed_object
 
@@ -89,7 +91,8 @@ class You:
             "__cached__",
             "__file__",
         ]
-        # The layout of the returned dictionary needs to be removed eventually and be formed at creation
+        # The layout of the returned dictionary needs to be removed eventually 
+        # and be formed at creation
         grouped_dict = {
             "module": {},
             "class": {},
@@ -111,19 +114,24 @@ class You:
 
     def _get_children(self, object_to_get_children) -> dict:
         """
-        Gets the children objects and recursively sorts and produces dictionaries.
+        Gets the children objects and recursively sorts and produces 
+        dictionaries.
 
         Params:
-            object_to_get_children: The object whose children need sorting and parsing.
+            object_to_get_children: The object whose children need sorting and 
+            parsing.
         Returns:
             The parsed dictionary of each child object.
         """
 
-        # TODO: This needs a little rework. It's ok for now, but it's unclear exactly what it's doing and that could be fixed.
-        # TODO: Maybe just a renaming so it's function is clear. This is the problem with recursion, it confuses shit.
+        # TODO: This needs a little rework. It's ok for now, but it's unclear 
+        # exactly what it's doing and that could be fixed.
+        # TODO: Maybe just a renaming so it's function is clear. This is the 
+        # problem with recursion, it confuses shit.
         # Get the sorted dictionary of the children objects
         children_dict = self._group_children(object_to_get_children.__dict__)
-        # Loop through the sorted dictionary and recursively sort and inspect the children.
+        # Loop through the sorted dictionary and recursively sort and inspect 
+        # the children.
         for children_objects in children_dict.values():
             for object_name, object_ref in children_objects.items():
                 # call back to inspected to start the loop over again.
@@ -132,7 +140,8 @@ class You:
 
     def _inspect_module(self, module_to_inspect, object_type) -> dict:
         """
-        Inspect a modules underlying data structure and provide an introspection dictionary.
+        Inspect a modules underlying data structure and provide an 
+        introspection dictionary.
 
         Params:
             module_to_inspect: Module to inspect
@@ -148,7 +157,8 @@ class You:
 
     def _inspect_class(self, class_to_inspect, object_type) -> dict:
         """
-        Inspect a class' underlying data structure and provide an introspection dictionary.
+        Inspect a class' underlying data structure and provide an introspection 
+        dictionary.
 
         Params:
             class_to_inspect: Class to inspect
@@ -158,13 +168,15 @@ class You:
 
         # Creates the dictionary representation of the provided class.
         class_dict = self.parser(class_to_inspect, object_type)
-        # Pulls out the children of the provided class and sorts them accordingly.
+        # Pulls out the children of the provided class and sorts them 
+        # accordingly.
         class_dict["children"] = self._get_children(class_to_inspect)
         return class_dict
 
     def _inspect_class_instance(self, instance_to_inspect, object_type) -> dict:
         """
-        Inspect an instances underlying data structure and provide an introspection dictionary.
+        Inspect an instances underlying data structure and provide an 
+        introspection dictionary.
 
         Params:
             instance_to_inspect: instance to inspect
@@ -172,9 +184,11 @@ class You:
             An introspection dictionary
         """
 
-        # Creates the dictionary representation of the provided instance of a class.
+        # Creates the dictionary representation of the provided instance of a 
+        # class.
         instance_dict = self.parser(instance_to_inspect, object_type)
-        # Sends the underlying class by through self for classification and parsing.
+        # Sends the underlying class by through self for classification and 
+        # parsing.
         class_dict = self(instance_to_inspect.__class__)
         # Merges the two dictionaries.
         instance_dict = instance_dict | class_dict
@@ -182,7 +196,8 @@ class You:
 
     def _inspect_method(self, method_to_inspect, object_type) -> dict:
         """
-        Inspect a methods underlying data structure and provide an introspection dictionary.
+        Inspect a methods underlying data structure and provide an 
+        introspection dictionary.
 
         Params:
             method_to_inspect: Method to inspect
@@ -200,7 +215,8 @@ class You:
 
     def _inspect_function(self, function_to_inspect, object_type) -> dict:
         """
-        Inspect a functions underlying data structure and provide an introspection dictionary.
+        Inspect a functions underlying data structure and provide an 
+        introspection dictionary.
 
         Params:
             function_to_inspect: Function to inspect
@@ -217,7 +233,8 @@ class You:
 
     def _inspect_property(self, property_to_inspect, object_type) -> dict:
         """
-        Inspect a property's underlying data structure and provide an introspection dictionary.
+        Inspect a property's underlying data structure and provide an 
+        introspection dictionary.
 
         Params:
             property_to_inspect: Property to inspect
@@ -228,7 +245,8 @@ class You:
         # Creates the dictionary representation of the provided property.
         property_dict = self.parser(property_to_inspect, object_type)
         # Sends the underlying functions to the correct inspection method.
-        property_dict["getter"] = (self(property_to_inspect.fget) if property_to_inspect.fget else None)
+        property_dict["getter"] = (self(property_to_inspect.fget) if 
+                                   property_to_inspect.fget else None)
         # Sends the underlying functions to the correct inspection method.
         property_dict["setter"] = (self(property_to_inspect.fset) if property_to_inspect.fset else None)
         # Sends the underlying functions to the correct inspection method.
