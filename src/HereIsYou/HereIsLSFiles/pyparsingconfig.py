@@ -1,5 +1,11 @@
-from figman import MasterGroup, Group
+from figman import MasterGroup, Group, Setting
 
+# WORK [ ]: This has some good potential.
+# NOTES: I really like this idea for Lexical Analysis. This allows for 
+# different groups to handle different scopes. It allows for an ast to made so 
+# easily. This handle AST creation durring lexical analysis. Or at least that 
+# is what it seems like to me. Until I do it I won't know for sure how it's 
+# going to work out.
 class ParsingMasterGroup(MasterGroup):
     """
     This extenson of MasterGroup provides a inteface more aimed at
