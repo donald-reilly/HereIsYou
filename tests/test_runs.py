@@ -1,37 +1,56 @@
-from FilePaths.file_paths import add_date_time, add_version
 from HereIsYou import You
-
-from utilities.custom_class import DescriptorExample, GoldenBase, GoldenClass
-from utilities.tkinter_window import MiniDesktopApp
-
+from Utils.FilePaths.file_paths import (
+                                add_date_time,
+                                add_version,
+                                ensure_path,
+                                get_object_name,
+                                _get_module_version,
+                                _get_package_version
+                                )
+from Utils.IO.json import to_file
+from Utils.MockClasses import (
+                        GoldenClass, 
+                        DescriptorExample, 
+                        GoldenBase,
+                        MiniDesktopApp
+                        )
 from pathlib import Path
-from importlib.metadata import metadata
-
-def get_object_name(object_to_inspect):
-
-    try:
-        object_name = object_to_inspect.__name__
-        return object_name
-
-    except AttributeError:
-        object_name = object_to_inspect.__class.__name__
-        return object_name
 
 def create_inspection(object_to_inspect):
 
     new_inspector = You()
     new_inspection = new_inspector(object_to_inspect)
 
+    return new_inspection
+   
+def create_file_path(object_to_inspect):
+     
     object_name = get_object_name(object_to_inspect)
 
+    you_version_number = "Version_" + _get_package_version("HereIsYou")
+
+    object_version = "Version_" + _get_module_version(object_to_inspect)
+
     folder = add_date_time(None, month = True, day = True, year = True)
-    file_name = add_date_time(object_name, hour = True, minute = True) + ".md"
+    file_name = add_date_time(object_name, hour = True, minute = True, 
+                              extension = ".json")
 
-    new_inspection_file_name = Path(__file__).parents[0] /folder / file_name 
+    new_inspection_file_name = Path(__file__).parents[0] / "HereIsYou" / you_version_number / object_name/ object_version / folder / file_name 
 
-    return new_inspection, new_inspection_file_name
+    return new_inspection_file_name
+def new_inspection(object_to_inspect):
+
+    inspection = create_inspection(object_to_inspect)
+
+    file_path = create_file_path(object_to_inspect)
+
+    ensure_path(file_path)
+
+    to_file(inspection, file_path)
 
 if __name__ == "__main__":
-    new_inspection, new_inspection_file_name = create_inspection(MiniDesktopApp)
-    print(new_inspection_file_name)
-   
+
+    classes_to_inspect = (DescriptorExample, GoldenBase, GoldenClass, MiniDesktopApp, You)
+
+    for obj_to_inspect in classes_to_inspect:
+        new_inspection(obj_to_inspect)
