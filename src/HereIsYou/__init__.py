@@ -1,3 +1,3 @@
-from HereIsYou.HereIsJR import You
+from HereIsYou.You import You
 
 __all__ = ['You']

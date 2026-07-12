@@ -3,13 +3,17 @@
 class DubsParser:
     """DubsParser, an attempt at language agnostic parsing."""
     
-    def __init__(selfu, language):
+    def __init__(self, language):
 
-        # WORK: Parse objects first.
-        # NOTES: This allows me to build reusable branches from classes and functions, since expressions could make multiple instances.
-        # NOTES: Also going to need to track immutables across calls. To see all of this. Fuck this is going to be a toughy. I'll need
-        # NOTES: This will be cool to see where they match up. If I build this out and see that self.listof should exist here here and here,
-        # NOTES: but somehow a copy got made or whatever, yeah i'm excited aout the understanding i'm going to gain from this.
+        # WORK [ ]: Parse objects first.
+        # NOTES: This allows me to build reusable branches from classes and 
+        # functions, since expressions could make multiple instances.
+        # NOTES: Also going to need to track immutables across calls. To see 
+        # all of this. Fuck this is going to be a toughy. I'll need
+        # NOTES: This will be cool to see where they match up. If I build this 
+        # out and see that self.listof should exist here here and here,
+        # NOTES: but somehow a copy got made or whatever, yeah i'm excited aout 
+        # the understanding i'm going to gain from this.
 
     def _parse_expression(self, pyscript):
         """
