@@ -1,7 +1,7 @@
 {
     "name": "You",
     "qualified name": "You",
-    "module name": "HereIsYou.HereIsJR.introspection",
+    "module name": "HereIsYou.You.introspection",
     "bases": [
         "<class 'object'>"
     ],
@@ -15,7 +15,7 @@
             "__init__": {
                 "name": "__init__",
                 "qualified name": "You.__init__",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Initializes the BInspected class.\n        ",
                 "type hints": {},
                 "variables": [
@@ -29,7 +29,7 @@
             "__call__": {
                 "name": "__call__",
                 "qualified name": "You.__call__",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Classify an object and return it's introspection dictionary.\n\n        Params:\n            object_to_inspect: Object to be inspected.\n        Returns:\n            An introspection dictionary.\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -50,7 +50,7 @@
             "_build_inspection": {
                 "name": "_build_inspection",
                 "qualified name": "You._build_inspection",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Complete object inspection and formation of the objects underlying \n        structure\n\n        Params:\n            object_to_inspect: Object to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -71,7 +71,7 @@
             "_group_children": {
                 "name": "_group_children",
                 "qualified name": "You._group_children",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Sort an objects __dict__\n\n        Params:\n            dict_to_group: __dict__ of the object that needs sorting\n        Returns:\n            A dictionary of the sorted objects. Example structure:\n            grouped_dict ={\n                \"module\": {},\n                \"class\": {},\n                \"method\": {},\n                \"function\": {},\n                \"property\": {},\n                \"instance\": {}\n            }\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -92,7 +92,7 @@
             "_get_children": {
                 "name": "_get_children",
                 "qualified name": "You._get_children",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Gets the children objects and recursively sorts and produces \n        dictionaries.\n\n        Params:\n            object_to_get_children: The object whose children need sorting and \n            parsing.\n        Returns:\n            The parsed dictionary of each child object.\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -113,7 +113,7 @@
             "_inspect_module": {
                 "name": "_inspect_module",
                 "qualified name": "You._inspect_module",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a modules underlying data structure and provide an \n        introspection dictionary.\n\n        Params:\n            module_to_inspect: Module to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -139,7 +139,7 @@
             "_inspect_class": {
                 "name": "_inspect_class",
                 "qualified name": "You._inspect_class",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a class' underlying data structure and provide an introspection \n        dictionary.\n\n        Params:\n            class_to_inspect: Class to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -165,7 +165,7 @@
             "_inspect_class_instance": {
                 "name": "_inspect_class_instance",
                 "qualified name": "You._inspect_class_instance",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect an instances underlying data structure and provide an \n        introspection dictionary.\n\n        Params:\n            instance_to_inspect: instance to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -191,7 +191,7 @@
             "_inspect_method": {
                 "name": "_inspect_method",
                 "qualified name": "You._inspect_method",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a methods underlying data structure and provide an \n        introspection dictionary.\n\n        Params:\n            method_to_inspect: Method to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -217,7 +217,7 @@
             "_inspect_function": {
                 "name": "_inspect_function",
                 "qualified name": "You._inspect_function",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a functions underlying data structure and provide an \n        introspection dictionary.\n\n        Params:\n            function_to_inspect: Function to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -243,7 +243,7 @@
             "_inspect_property": {
                 "name": "_inspect_property",
                 "qualified name": "You._inspect_property",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a property's underlying data structure and provide an \n        introspection dictionary.\n\n        Params:\n            property_to_inspect: Property to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -269,7 +269,7 @@
             "_inspect_built_in": {
                 "name": "_inspect_built_in",
                 "qualified name": "You._inspect_built_in",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect the built_in underlying data structure and provide an introspection dictionary.\n\n        Params:\n            built_in_to_inspect: built_in to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -290,7 +290,7 @@
             "_inspect_arguments": {
                 "name": "_inspect_arguments",
                 "qualified name": "You._inspect_arguments",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect an arguments underlying data structure and provide an introspection dictionary.\n\n        Params:\n            argument_to_inspect: Argument to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"
@@ -311,7 +311,7 @@
             "_inspect_variables": {
                 "name": "_inspect_variables",
                 "qualified name": "You._inspect_variables",
-                "module name": "HereIsYou.HereIsJR.introspection",
+                "module name": "HereIsYou.You.introspection",
                 "doc string": "\n        Inspect a variables underlying data structure and provide an introspection dictionary.\n\n        Params:\n            variable_to_inspect: Variable to inspect\n        Returns:\n            An introspection dictionary\n        ",
                 "type hints": {
                     "return": "<class 'dict'>"

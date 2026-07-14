@@ -1,0 +1,2328 @@
+{
+    "name": "builtins",
+    "doc string": "Built-in functions, types, exceptions, and other objects.\n\nThis module provides direct access to all 'built-in'\nidentifiers of Python; for example, builtins.len is\nthe full name for the built-in function len().\n\nThis module is not normally accessed explicitly by most\napplications, but can be useful in modules that provide\nobjects with the same name as a built-in value, but in\nwhich the built-in of that name is also needed.",
+    "type hints": {},
+    "children": {
+        "module": {},
+        "class": {
+            "bool": {
+                "name": "bool",
+                "qualified name": "bool",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'int'>"
+                ],
+                "doc string": "bool(x) -> bool\n\nReturns True when the argument x is true, False otherwise.\nThe builtins True and False are the only two instances of the class bool.\nThe class bool is a subclass of the class int, and cannot be subclassed.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "memoryview": {
+                "name": "memoryview",
+                "qualified name": "memoryview",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Create a new memoryview object which references the given object.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "bytearray": {
+                "name": "bytearray",
+                "qualified name": "bytearray",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "bytearray(iterable_of_ints) -> bytearray\nbytearray(string, encoding[, errors]) -> bytearray\nbytearray(bytes_or_buffer) -> mutable copy of bytes_or_buffer\nbytearray(int) -> bytes array of size given by the parameter initialized with null bytes\nbytearray() -> empty bytes array\n\nConstruct a mutable bytearray object from:\n  - an iterable yielding integers in range(256)\n  - a text string encoded using the specified encoding\n  - a bytes or a buffer object\n  - any object implementing the buffer API.\n  - an integer",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "bytes": {
+                "name": "bytes",
+                "qualified name": "bytes",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "bytes(iterable_of_ints) -> bytes\nbytes(string, encoding[, errors]) -> bytes\nbytes(bytes_or_buffer) -> immutable copy of bytes_or_buffer\nbytes(int) -> bytes object of size given by the parameter initialized with null bytes\nbytes() -> empty bytes object\n\nConstruct an immutable array of bytes from:\n  - an iterable yielding integers in range(256)\n  - a text string encoded using the specified encoding\n  - any object implementing the buffer API.\n  - an integer",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "classmethod": {
+                "name": "classmethod",
+                "qualified name": "classmethod",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "classmethod(function) -> method\n\nConvert a function to be a class method.\n\nA class method receives the class as implicit first argument,\njust like an instance method receives the instance.\nTo declare a class method, use this idiom:\n\n  class C:\n      @classmethod\n      def f(cls, arg1, arg2, argN):\n          ...\n\nIt can be called either on the class (e.g. C.f()) or on an instance\n(e.g. C().f()).  The instance is ignored except for its class.\nIf a class method is called for a derived class, the derived class\nobject is passed as the implied first argument.\n\nClass methods are different than C++ or Java static methods.\nIf you want those, see the staticmethod builtin.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "complex": {
+                "name": "complex",
+                "qualified name": "complex",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Create a complex number from a real part and an optional imaginary part.\n\nThis is equivalent to (real + imag*1j) where imag defaults to 0.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "dict": {
+                "name": "dict",
+                "qualified name": "dict",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "dict() -> new empty dictionary\ndict(mapping) -> new dictionary initialized from a mapping object's\n    (key, value) pairs\ndict(iterable) -> new dictionary initialized as if via:\n    d = {}\n    for k, v in iterable:\n        d[k] = v\ndict(**kwargs) -> new dictionary initialized with the name=value pairs\n    in the keyword argument list.  For example:  dict(one=1, two=2)",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "enumerate": {
+                "name": "enumerate",
+                "qualified name": "enumerate",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Return an enumerate object.\n\n  iterable\n    an object supporting iteration\n\nThe enumerate object yields pairs containing a count (from start, which\ndefaults to zero) and a value yielded by the iterable argument.\n\nenumerate is useful for obtaining an indexed list:\n    (0, seq[0]), (1, seq[1]), (2, seq[2]), ...",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "filter": {
+                "name": "filter",
+                "qualified name": "filter",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "filter(function or None, iterable) --> filter object\n\nReturn an iterator yielding those items of iterable for which function(item)\nis true. If function is None, return the items that are true.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "float": {
+                "name": "float",
+                "qualified name": "float",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Convert a string or number to a floating point number, if possible.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "frozenset": {
+                "name": "frozenset",
+                "qualified name": "frozenset",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "frozenset() -> empty frozenset object\nfrozenset(iterable) -> frozenset object\n\nBuild an immutable unordered collection of unique elements.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "property": {
+                "name": "property",
+                "qualified name": "property",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Property attribute.\n\n  fget\n    function to be used for getting an attribute value\n  fset\n    function to be used for setting an attribute value\n  fdel\n    function to be used for del'ing an attribute\n  doc\n    docstring\n\nTypical use is to define a managed attribute x:\n\nclass C(object):\n    def getx(self): return self._x\n    def setx(self, value): self._x = value\n    def delx(self): del self._x\n    x = property(getx, setx, delx, \"I'm the 'x' property.\")\n\nDecorators make defining new properties or modifying existing ones easy:\n\nclass C(object):\n    @property\n    def x(self):\n        \"I am the 'x' property.\"\n        return self._x\n    @x.setter\n    def x(self, value):\n        self._x = value\n    @x.deleter\n    def x(self):\n        del self._x",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "int": {
+                "name": "int",
+                "qualified name": "int",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "int([x]) -> integer\nint(x, base=10) -> integer\n\nConvert a number or string to an integer, or return 0 if no arguments\nare given.  If x is a number, return x.__int__().  For floating point\nnumbers, this truncates towards zero.\n\nIf x is not a number or if base is given, then x must be a string,\nbytes, or bytearray instance representing an integer literal in the\ngiven base.  The literal can be preceded by '+' or '-' and be surrounded\nby whitespace.  The base defaults to 10.  Valid bases are 0 and 2-36.\nBase 0 means to interpret the base from the string as an integer literal.\n>>> int('0b100', base=0)\n4",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "list": {
+                "name": "list",
+                "qualified name": "list",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Built-in mutable sequence.\n\nIf no argument is given, the constructor creates a new empty list.\nThe argument must be an iterable if specified.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "map": {
+                "name": "map",
+                "qualified name": "map",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "map(func, *iterables) --> map object\n\nMake an iterator that computes the function using arguments from\neach of the iterables.  Stops when the shortest iterable is exhausted.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "object": {
+                "name": "object",
+                "qualified name": "object",
+                "module name": "builtins",
+                "bases": [],
+                "doc string": "The base class of the class hierarchy.\n\nWhen called, it accepts no arguments and returns a new featureless\ninstance that has no instance attributes and cannot be given any.\n",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "range": {
+                "name": "range",
+                "qualified name": "range",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "range(stop) -> range object\nrange(start, stop[, step]) -> range object\n\nReturn an object that produces a sequence of integers from start (inclusive)\nto stop (exclusive) by step.  range(i, j) produces i, i+1, i+2, ..., j-1.\nstart defaults to 0, and stop is omitted!  range(4) produces 0, 1, 2, 3.\nThese are exactly the valid indices for a list of 4 elements.\nWhen step is given, it specifies the increment (or decrement).",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "reversed": {
+                "name": "reversed",
+                "qualified name": "reversed",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Return a reverse iterator over the values of the given sequence.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "set": {
+                "name": "set",
+                "qualified name": "set",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "set() -> new empty set object\nset(iterable) -> new set object\n\nBuild an unordered collection of unique elements.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "slice": {
+                "name": "slice",
+                "qualified name": "slice",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "slice(stop)\nslice(start, stop[, step])\n\nCreate a slice object.  This is used for extended slicing (e.g. a[0:10:2]).",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "staticmethod": {
+                "name": "staticmethod",
+                "qualified name": "staticmethod",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "staticmethod(function) -> method\n\nConvert a function to be a static method.\n\nA static method does not receive an implicit first argument.\nTo declare a static method, use this idiom:\n\n     class C:\n         @staticmethod\n         def f(arg1, arg2, argN):\n             ...\n\nIt can be called either on the class (e.g. C.f()) or on an instance\n(e.g. C().f()). Both the class and the instance are ignored, and\nneither is passed implicitly as the first argument to the method.\n\nStatic methods in Python are similar to those found in Java or C++.\nFor a more advanced concept, see the classmethod builtin.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "str": {
+                "name": "str",
+                "qualified name": "str",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "str(object='') -> str\nstr(bytes_or_buffer[, encoding[, errors]]) -> str\n\nCreate a new string object from the given object. If encoding or\nerrors is specified, then the object must expose a data buffer\nthat will be decoded using the given encoding and error handler.\nOtherwise, returns the result of object.__str__() (if defined)\nor repr(object).\nencoding defaults to sys.getdefaultencoding().\nerrors defaults to 'strict'.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "super": {
+                "name": "super",
+                "qualified name": "super",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "super() -> same as super(__class__, <first argument>)\nsuper(type) -> unbound super object\nsuper(type, obj) -> bound super object; requires isinstance(obj, type)\nsuper(type, type2) -> bound super object; requires issubclass(type2, type)\nTypical use to call a cooperative superclass method:\nclass C(B):\n    def meth(self, arg):\n        super().meth(arg)\nThis works for class methods too:\nclass C(B):\n    @classmethod\n    def cmeth(cls, arg):\n        super().cmeth(arg)\n",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "tuple": {
+                "name": "tuple",
+                "qualified name": "tuple",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Built-in immutable sequence.\n\nIf no argument is given, the constructor returns an empty tuple.\nIf iterable is specified the tuple is initialized from iterable's items.\n\nIf the argument is a tuple, the return value is the same object.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "type": {
+                "name": "type",
+                "qualified name": "type",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "type(object) -> the object's type\ntype(name, bases, dict, **kwds) -> a new type",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "zip": {
+                "name": "zip",
+                "qualified name": "zip",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "zip(*iterables, strict=False) --> Yield tuples until an input is exhausted.\n\n   >>> list(zip('abcdefg', range(3), range(4)))\n   [('a', 0, 0), ('b', 1, 1), ('c', 2, 2)]\n\nThe zip object yields n-length tuples, where n is the number of iterables\npassed as positional arguments to zip().  The i-th element in every tuple\ncomes from the i-th iterable argument to zip().  This continues until the\nshortest argument is exhausted.\n\nIf strict is true and one of the arguments is exhausted before the others,\nraise a ValueError.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BaseException": {
+                "name": "BaseException",
+                "qualified name": "BaseException",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Common base class for all exceptions",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BaseExceptionGroup": {
+                "name": "BaseExceptionGroup",
+                "qualified name": "BaseExceptionGroup",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseException'>"
+                ],
+                "doc string": "A combination of multiple unrelated exceptions.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "Exception": {
+                "name": "Exception",
+                "qualified name": "Exception",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseException'>"
+                ],
+                "doc string": "Common base class for all non-exit exceptions.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "GeneratorExit": {
+                "name": "GeneratorExit",
+                "qualified name": "GeneratorExit",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseException'>"
+                ],
+                "doc string": "Request that a generator exit.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "KeyboardInterrupt": {
+                "name": "KeyboardInterrupt",
+                "qualified name": "KeyboardInterrupt",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseException'>"
+                ],
+                "doc string": "Program interrupted by user.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "SystemExit": {
+                "name": "SystemExit",
+                "qualified name": "SystemExit",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseException'>"
+                ],
+                "doc string": "Request to exit from the interpreter.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ArithmeticError": {
+                "name": "ArithmeticError",
+                "qualified name": "ArithmeticError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for arithmetic errors.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "AssertionError": {
+                "name": "AssertionError",
+                "qualified name": "AssertionError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Assertion failed.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "AttributeError": {
+                "name": "AttributeError",
+                "qualified name": "AttributeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Attribute not found.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BufferError": {
+                "name": "BufferError",
+                "qualified name": "BufferError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Buffer error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "EOFError": {
+                "name": "EOFError",
+                "qualified name": "EOFError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Read beyond end of file.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ImportError": {
+                "name": "ImportError",
+                "qualified name": "ImportError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Import can't find module, or can't find name in module.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "LookupError": {
+                "name": "LookupError",
+                "qualified name": "LookupError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for lookup errors.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "MemoryError": {
+                "name": "MemoryError",
+                "qualified name": "MemoryError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Out of memory.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "NameError": {
+                "name": "NameError",
+                "qualified name": "NameError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Name not found globally.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "OSError": {
+                "name": "OSError",
+                "qualified name": "OSError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for I/O related errors.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ReferenceError": {
+                "name": "ReferenceError",
+                "qualified name": "ReferenceError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Weak ref proxy used after referent went away.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "RuntimeError": {
+                "name": "RuntimeError",
+                "qualified name": "RuntimeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Unspecified run-time error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "StopAsyncIteration": {
+                "name": "StopAsyncIteration",
+                "qualified name": "StopAsyncIteration",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Signal the end from iterator.__anext__().",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "StopIteration": {
+                "name": "StopIteration",
+                "qualified name": "StopIteration",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Signal the end from iterator.__next__().",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "SyntaxError": {
+                "name": "SyntaxError",
+                "qualified name": "SyntaxError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Invalid syntax.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "SystemError": {
+                "name": "SystemError",
+                "qualified name": "SystemError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Internal error in the Python interpreter.\n\nPlease report this to the Python maintainer, along with the traceback,\nthe Python version, and the hardware/OS platform and version.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "TypeError": {
+                "name": "TypeError",
+                "qualified name": "TypeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Inappropriate argument type.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ValueError": {
+                "name": "ValueError",
+                "qualified name": "ValueError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Inappropriate argument value (of correct type).",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "Warning": {
+                "name": "Warning",
+                "qualified name": "Warning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for warning categories.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "FloatingPointError": {
+                "name": "FloatingPointError",
+                "qualified name": "FloatingPointError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ArithmeticError'>"
+                ],
+                "doc string": "Floating point operation failed.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "OverflowError": {
+                "name": "OverflowError",
+                "qualified name": "OverflowError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ArithmeticError'>"
+                ],
+                "doc string": "Result too large to be represented.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ZeroDivisionError": {
+                "name": "ZeroDivisionError",
+                "qualified name": "ZeroDivisionError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ArithmeticError'>"
+                ],
+                "doc string": "Second argument to a division or modulo operation was zero.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BytesWarning": {
+                "name": "BytesWarning",
+                "qualified name": "BytesWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about bytes and buffer related problems, mostly\nrelated to conversion from str or comparing to str.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "DeprecationWarning": {
+                "name": "DeprecationWarning",
+                "qualified name": "DeprecationWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about deprecated features.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "EncodingWarning": {
+                "name": "EncodingWarning",
+                "qualified name": "EncodingWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about encodings.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "FutureWarning": {
+                "name": "FutureWarning",
+                "qualified name": "FutureWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about constructs that will change semantically\nin the future.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ImportWarning": {
+                "name": "ImportWarning",
+                "qualified name": "ImportWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about probable mistakes in module imports",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "PendingDeprecationWarning": {
+                "name": "PendingDeprecationWarning",
+                "qualified name": "PendingDeprecationWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about features which will be deprecated\nin the future.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ResourceWarning": {
+                "name": "ResourceWarning",
+                "qualified name": "ResourceWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about resource usage.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "RuntimeWarning": {
+                "name": "RuntimeWarning",
+                "qualified name": "RuntimeWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about dubious runtime behavior.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "SyntaxWarning": {
+                "name": "SyntaxWarning",
+                "qualified name": "SyntaxWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about dubious syntax.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnicodeWarning": {
+                "name": "UnicodeWarning",
+                "qualified name": "UnicodeWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings about Unicode related problems, mostly\nrelated to conversion problems.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UserWarning": {
+                "name": "UserWarning",
+                "qualified name": "UserWarning",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Warning'>"
+                ],
+                "doc string": "Base class for warnings generated by user code.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BlockingIOError": {
+                "name": "BlockingIOError",
+                "qualified name": "BlockingIOError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "I/O operation would block.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ChildProcessError": {
+                "name": "ChildProcessError",
+                "qualified name": "ChildProcessError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Child process error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ConnectionError": {
+                "name": "ConnectionError",
+                "qualified name": "ConnectionError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Connection error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "FileExistsError": {
+                "name": "FileExistsError",
+                "qualified name": "FileExistsError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "File already exists.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "FileNotFoundError": {
+                "name": "FileNotFoundError",
+                "qualified name": "FileNotFoundError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "File not found.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "InterruptedError": {
+                "name": "InterruptedError",
+                "qualified name": "InterruptedError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Interrupted by signal.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "IsADirectoryError": {
+                "name": "IsADirectoryError",
+                "qualified name": "IsADirectoryError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Operation doesn't work on directories.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "NotADirectoryError": {
+                "name": "NotADirectoryError",
+                "qualified name": "NotADirectoryError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Operation only works on directories.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "PermissionError": {
+                "name": "PermissionError",
+                "qualified name": "PermissionError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Not enough permissions.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ProcessLookupError": {
+                "name": "ProcessLookupError",
+                "qualified name": "ProcessLookupError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Process not found.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "TimeoutError": {
+                "name": "TimeoutError",
+                "qualified name": "TimeoutError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'OSError'>"
+                ],
+                "doc string": "Timeout expired.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "IndentationError": {
+                "name": "IndentationError",
+                "qualified name": "IndentationError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'SyntaxError'>"
+                ],
+                "doc string": "Improper indentation.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "IndexError": {
+                "name": "IndexError",
+                "qualified name": "IndexError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'LookupError'>"
+                ],
+                "doc string": "Sequence index out of range.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "KeyError": {
+                "name": "KeyError",
+                "qualified name": "KeyError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'LookupError'>"
+                ],
+                "doc string": "Mapping key not found.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ModuleNotFoundError": {
+                "name": "ModuleNotFoundError",
+                "qualified name": "ModuleNotFoundError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ImportError'>"
+                ],
+                "doc string": "Module not found.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "NotImplementedError": {
+                "name": "NotImplementedError",
+                "qualified name": "NotImplementedError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'RuntimeError'>"
+                ],
+                "doc string": "Method or function hasn't been implemented yet.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "RecursionError": {
+                "name": "RecursionError",
+                "qualified name": "RecursionError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'RuntimeError'>"
+                ],
+                "doc string": "Recursion limit exceeded.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnboundLocalError": {
+                "name": "UnboundLocalError",
+                "qualified name": "UnboundLocalError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'NameError'>"
+                ],
+                "doc string": "Local name referenced but not bound to a value.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnicodeError": {
+                "name": "UnicodeError",
+                "qualified name": "UnicodeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ValueError'>"
+                ],
+                "doc string": "Unicode related error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "BrokenPipeError": {
+                "name": "BrokenPipeError",
+                "qualified name": "BrokenPipeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ConnectionError'>"
+                ],
+                "doc string": "Broken pipe.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ConnectionAbortedError": {
+                "name": "ConnectionAbortedError",
+                "qualified name": "ConnectionAbortedError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ConnectionError'>"
+                ],
+                "doc string": "Connection aborted.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ConnectionRefusedError": {
+                "name": "ConnectionRefusedError",
+                "qualified name": "ConnectionRefusedError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ConnectionError'>"
+                ],
+                "doc string": "Connection refused.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ConnectionResetError": {
+                "name": "ConnectionResetError",
+                "qualified name": "ConnectionResetError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'ConnectionError'>"
+                ],
+                "doc string": "Connection reset.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "TabError": {
+                "name": "TabError",
+                "qualified name": "TabError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'IndentationError'>"
+                ],
+                "doc string": "Improper mixture of spaces and tabs.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnicodeDecodeError": {
+                "name": "UnicodeDecodeError",
+                "qualified name": "UnicodeDecodeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'UnicodeError'>"
+                ],
+                "doc string": "Unicode decoding error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnicodeEncodeError": {
+                "name": "UnicodeEncodeError",
+                "qualified name": "UnicodeEncodeError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'UnicodeError'>"
+                ],
+                "doc string": "Unicode encoding error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "UnicodeTranslateError": {
+                "name": "UnicodeTranslateError",
+                "qualified name": "UnicodeTranslateError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'UnicodeError'>"
+                ],
+                "doc string": "Unicode translation error.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "ExceptionGroup": {
+                "name": "ExceptionGroup",
+                "qualified name": "ExceptionGroup",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'BaseExceptionGroup'>",
+                    "<class 'Exception'>"
+                ],
+                "doc string": null,
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "EnvironmentError": {
+                "name": "OSError",
+                "qualified name": "OSError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for I/O related errors.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "IOError": {
+                "name": "OSError",
+                "qualified name": "OSError",
+                "module name": "builtins",
+                "bases": [
+                    "<class 'Exception'>"
+                ],
+                "doc string": "Base class for I/O related errors.",
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {},
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        },
+        "method": {},
+        "function": {},
+        "property": {},
+        "instance": {
+            "__spec__": {
+                "module name": "_frozen_importlib",
+                "doc string": "The specification for a module, used for loading.\n\n    A module's spec is the source for information about the module.  For\n    data associated with the module, including source, use the spec's\n    loader.\n\n    `name` is the absolute name of the module.  `loader` is the loader\n    to use when loading the module.  `parent` is the name of the\n    package the module is in.  The parent is derived from the name.\n\n    `is_package` determines if the module is considered a package or\n    not.  On modules this is reflected by the `__path__` attribute.\n\n    `origin` is the specific location used by the loader from which to\n    load the module, if that information is available.  When filename is\n    set, origin will match.\n\n    `has_location` indicates that a spec's \"origin\" reflects a location.\n    When this is True, `__file__` attribute of the module is set.\n\n    `cached` is the location of the cached bytecode file, if any.  It\n    corresponds to the `__cached__` attribute.\n\n    `submodule_search_locations` is the sequence of path entries to\n    search when importing submodules.  If set, is_package should be\n    True--and False otherwise.\n\n    Packages are simply modules that (may) have submodules.  If a spec\n    has a non-None value in `submodule_search_locations`, the import\n    system will consider modules loaded from the spec as packages.\n\n    Only finders (see importlib.abc.MetaPathFinder and\n    importlib.abc.PathEntryFinder) should modify ModuleSpec instances.\n\n    ",
+                "Instance Variables": {
+                    "name": "builtins",
+                    "loader": "<class '_frozen_importlib.BuiltinImporter'>",
+                    "origin": "built-in",
+                    "loader_state": null,
+                    "submodule_search_locations": null,
+                    "_uninitialized_submodules": [],
+                    "_set_fileattr": false,
+                    "_cached": null
+                },
+                "name": "ModuleSpec",
+                "qualified name": "ModuleSpec",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "ModuleSpec.__init__",
+                            "module name": "_frozen_importlib",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "loader",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "ModuleSpec.__repr__",
+                            "module name": "_frozen_importlib",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__eq__": {
+                            "name": "__eq__",
+                            "qualified name": "ModuleSpec.__eq__",
+                            "module name": "_frozen_importlib",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "other",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {
+                        "cached": {
+                            "doc string": null,
+                            "getter": {
+                                "name": "cached",
+                                "qualified name": "ModuleSpec.cached",
+                                "module name": "_frozen_importlib",
+                                "doc string": null,
+                                "type hints": {},
+                                "variables": [
+                                    {
+                                        "name": "self",
+                                        "default": null,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "setter": {
+                                "name": "cached",
+                                "qualified name": "ModuleSpec.cached",
+                                "module name": "_frozen_importlib",
+                                "doc string": null,
+                                "type hints": {},
+                                "variables": [
+                                    {
+                                        "name": "self",
+                                        "default": null,
+                                        "type": null
+                                    },
+                                    {
+                                        "name": "cached",
+                                        "default": null,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "deleter": null
+                        },
+                        "parent": {
+                            "doc string": "The name of the module's parent.",
+                            "getter": {
+                                "name": "parent",
+                                "qualified name": "ModuleSpec.parent",
+                                "module name": "_frozen_importlib",
+                                "doc string": "The name of the module's parent.",
+                                "type hints": {},
+                                "variables": [
+                                    {
+                                        "name": "self",
+                                        "default": null,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "setter": null,
+                            "deleter": null
+                        },
+                        "has_location": {
+                            "doc string": null,
+                            "getter": {
+                                "name": "has_location",
+                                "qualified name": "ModuleSpec.has_location",
+                                "module name": "_frozen_importlib",
+                                "doc string": null,
+                                "type hints": {},
+                                "variables": [
+                                    {
+                                        "name": "self",
+                                        "default": null,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "setter": {
+                                "name": "has_location",
+                                "qualified name": "ModuleSpec.has_location",
+                                "module name": "_frozen_importlib",
+                                "doc string": null,
+                                "type hints": {},
+                                "variables": [
+                                    {
+                                        "name": "self",
+                                        "default": null,
+                                        "type": null
+                                    },
+                                    {
+                                        "name": "value",
+                                        "default": null,
+                                        "type": null
+                                    }
+                                ]
+                            },
+                            "deleter": null
+                        }
+                    },
+                    "instance": {}
+                }
+            },
+            "quit": {
+                "module name": "_sitebuiltins",
+                "doc string": null,
+                "Instance Variables": {
+                    "name": "quit",
+                    "eof": "Ctrl-D (i.e. EOF)"
+                },
+                "name": "Quitter",
+                "qualified name": "Quitter",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "Quitter.__init__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "eof",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "Quitter.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "Quitter.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "code",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "exit": {
+                "module name": "_sitebuiltins",
+                "doc string": null,
+                "type hints": {},
+                "Instance Variables": {
+                    "name": "exit",
+                    "eof": "Ctrl-D (i.e. EOF)"
+                },
+                "name": "Quitter",
+                "qualified name": "Quitter",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "Quitter.__init__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "eof",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "Quitter.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "Quitter.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "code",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "copyright": {
+                "module name": "_sitebuiltins",
+                "doc string": "interactive prompt objects for printing the license text, a list of\n    contributors and the copyright notice.",
+                "Instance Variables": {
+                    "_Printer__name": "copyright",
+                    "_Printer__data": "Copyright (c) 2001-2023 Python Software Foundation.\nAll Rights Reserved.\n\nCopyright (c) 2000 BeOpen.com.\nAll Rights Reserved.\n\nCopyright (c) 1995-2001 Corporation for National Research Initiatives.\nAll Rights Reserved.\n\nCopyright (c) 1991-1995 Stichting Mathematisch Centrum, Amsterdam.\nAll Rights Reserved.",
+                    "_Printer__lines": null,
+                    "_Printer__filenames": []
+                },
+                "name": "_Printer",
+                "qualified name": "_Printer",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "_Printer.__init__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "data",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "files",
+                                    "default": [],
+                                    "type": null
+                                },
+                                {
+                                    "name": "dirs",
+                                    "default": [],
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "_Printer__setup": {
+                            "name": "__setup",
+                            "qualified name": "_Printer.__setup",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "_Printer.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "_Printer.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "credits": {
+                "module name": "_sitebuiltins",
+                "doc string": "interactive prompt objects for printing the license text, a list of\n    contributors and the copyright notice.",
+                "type hints": {},
+                "Instance Variables": {
+                    "_Printer__name": "credits",
+                    "_Printer__data": "    Thanks to CWI, CNRI, BeOpen.com, Zope Corporation and a cast of thousands\n    for supporting Python development.  See www.python.org for more information.",
+                    "_Printer__lines": null,
+                    "_Printer__filenames": []
+                },
+                "name": "_Printer",
+                "qualified name": "_Printer",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "_Printer.__init__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "data",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "files",
+                                    "default": [],
+                                    "type": null
+                                },
+                                {
+                                    "name": "dirs",
+                                    "default": [],
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "_Printer__setup": {
+                            "name": "__setup",
+                            "qualified name": "_Printer.__setup",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "_Printer.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "_Printer.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "license": {
+                "module name": "_sitebuiltins",
+                "doc string": "interactive prompt objects for printing the license text, a list of\n    contributors and the copyright notice.",
+                "type hints": {},
+                "Instance Variables": {
+                    "_Printer__name": "license",
+                    "_Printer__data": "See https://www.python.org/psf/license/",
+                    "_Printer__lines": null,
+                    "_Printer__filenames": [
+                        "/usr/lib/python3.12/../LICENSE.txt",
+                        "/usr/lib/python3.12/../LICENSE",
+                        "/usr/lib/python3.12/LICENSE.txt",
+                        "/usr/lib/python3.12/LICENSE",
+                        "./LICENSE.txt",
+                        "./LICENSE"
+                    ]
+                },
+                "name": "_Printer",
+                "qualified name": "_Printer",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "_Printer.__init__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "data",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "files",
+                                    "default": [],
+                                    "type": null
+                                },
+                                {
+                                    "name": "dirs",
+                                    "default": [],
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "_Printer__setup": {
+                            "name": "__setup",
+                            "qualified name": "_Printer.__setup",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "_Printer.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "_Printer.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            },
+            "help": {
+                "module name": "_sitebuiltins",
+                "doc string": "Define the builtin 'help'.\n\n    This is a wrapper around pydoc.help that provides a helpful message\n    when 'help' is typed at the Python interactive prompt.\n\n    Calling help() at the Python prompt starts an interactive help session.\n    Calling help(thing) prints help for the python object 'thing'.\n    ",
+                "Instance Variables": {},
+                "name": "_Helper",
+                "qualified name": "_Helper",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__repr__": {
+                            "name": "__repr__",
+                            "qualified name": "_Helper.__repr__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__call__": {
+                            "name": "__call__",
+                            "qualified name": "_Helper.__call__",
+                            "module name": "_sitebuiltins",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        }
+    }
+}

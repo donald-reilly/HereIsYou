@@ -28,9 +28,10 @@ def create_file_path(object_to_inspect):
     object_name = get_object_name(object_to_inspect)
 
     you_version_number = "Version_" + _get_package_version("HereIsYou")
-
-    object_version = "Version_" + _get_module_version(object_to_inspect)
-
+    try:
+        object_version = "Version_" + _get_module_version(object_to_inspect)
+    except:
+        object_version = "Unversioned_Object"
     folder = add_date_time(None, month = True, day = True, year = True)
     file_name = add_date_time(object_name, hour = True, minute = True, 
                               extension = ".json")
@@ -41,7 +42,7 @@ def create_file_path(object_to_inspect):
 def new_inspection(object_to_inspect):
 
     inspection = create_inspection(object_to_inspect)
-
+    
     file_path = create_file_path(object_to_inspect)
 
     ensure_path(file_path)
@@ -50,7 +51,7 @@ def new_inspection(object_to_inspect):
 
 if __name__ == "__main__":
 
-    classes_to_inspect = (DescriptorExample, GoldenBase, GoldenClass, MiniDesktopApp, You)
+    classes_to_inspect = (DescriptorExample, GoldenBase, GoldenClass, MiniDesktopApp, You, int, str, object, __builtins__)
 
     for obj_to_inspect in classes_to_inspect:
         new_inspection(obj_to_inspect)
