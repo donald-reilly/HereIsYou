@@ -1,9 +1,9 @@
-# BInspected
+# HereIsYou
 
 > [!WARNING]
-> This project is under active development and is untested. The API is unstable and breaking changes may occur without notice.
+> This project is under active development. The API is unstable and breaking changes may occur without notice.
 
-BInspected is a Python package for deep runtime introspection of Python objects. It exposes constructor signatures, default values, annotations, docstrings, and structural metadata for modules, classes, functions, methods, and properties.
+HereIsYou is a Python package for deep runtime introspection of Python objects. It exposes constructor signatures, default values, annotations, docstrings, and structural metadata for modules, classes, functions, methods, and properties.
 
 The project originally began as a tool to support dynamic testing, but it has evolved into a personal exploration of Python’s meta‑programming capabilities and runtime internals.
 
@@ -22,7 +22,7 @@ The project originally began as a tool to support dynamic testing, but it has ev
 
 ## Overview
 
-BInspected is a lightweight introspection engine built to reveal the underlying structure of Python objects. It walks modules, classes, and functions recursively, extracting metadata in a clean, structured format.
+HereIsYou is a lightweight introspection engine built to reveal the underlying structure of Python objects. It walks modules, classes, and functions recursively, extracting metadata in a clean, structured format.
 
 This project is still in early development. Each feature added has been part of a broader effort to understand Python’s internals — descriptors, callables, annotations, __dict__ mechanics, and the runtime object model. While the original goal was dynamic test generation, the project now serves as a hands‑on learning tool for exploring Python’s meta‑programming landscape.
 
@@ -30,11 +30,11 @@ This project is still in early development. Each feature added has been part of 
 
 ## Installation
 
-This package is not published to PyPI. To install locally, clone the repository and run:
+This package can be installed using pip:
 
 ```bash
 
-pip install -e .
+pip install hereisyou
  
 ```
 

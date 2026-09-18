@@ -70,7 +70,6 @@ Older versions may continure to functions, but they are not monitored or patched
 | Version | Supported          |
 | ------- | ------------------ |
 | 0.1.0   | :white_check_mark: |
-| 0.1.0   | ;white_check_mark: |
 
 Security support will expand once the project reaches a stable boundary. Until then, the expectation is that users upgrade 
 to the most recent release to receive fixes.
