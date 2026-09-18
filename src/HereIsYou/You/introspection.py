@@ -1,7 +1,5 @@
 from .classifier import Classifier
 from  .parser import Parser
-import pprint
-
 # BUG Empty fields shouldn't show in json.
 
 # WORK CLI needs to be done. Should be able to run and inspect files seperately.
