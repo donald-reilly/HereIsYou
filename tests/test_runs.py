@@ -1,5 +1,5 @@
 from HereIsYou import You
-from Utils.FilePaths.file_paths import (
+from dubslib.path import (
                                 add_date_time,
                                 add_version,
                                 ensure_path,
@@ -7,8 +7,8 @@ from Utils.FilePaths.file_paths import (
                                 _get_module_version,
                                 _get_package_version
                                 )
-from Utils.IO.json import to_file
-from Utils.MockClasses import (
+from dubslib.io import Persistence
+from dubslib.mockclasses import (
                         GoldenClass, 
                         DescriptorExample, 
                         GoldenBase,
@@ -40,14 +40,14 @@ def create_file_path(object_to_inspect):
 
     return new_inspection_file_name
 def new_inspection(object_to_inspect):
-
+    persist = Persistence()
     inspection = create_inspection(object_to_inspect)
     
     file_path = create_file_path(object_to_inspect)
 
     ensure_path(file_path)
 
-    to_file(inspection, file_path)
+    persist.to_file(inspection, file_path, "json")
 
 if __name__ == "__main__":
 
