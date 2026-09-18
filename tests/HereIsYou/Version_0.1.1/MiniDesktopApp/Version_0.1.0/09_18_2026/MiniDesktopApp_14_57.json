@@ -1,0 +1,207 @@
+{
+    "name": "MiniDesktopApp",
+    "qualified name": "MiniDesktopApp",
+    "module name": "dubslib.mockclasses.mock_tkinter",
+    "bases": [
+        "<class 'tkinter.Tk'>"
+    ],
+    "doc string": null,
+    "type hints": {},
+    "children": {
+        "module": {},
+        "class": {},
+        "method": {},
+        "function": {
+            "__init__": {
+                "name": "__init__",
+                "qualified name": "MiniDesktopApp.__init__",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "__str__": {
+                "name": "__str__",
+                "qualified name": "MiniDesktopApp.__str__",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_build_ui": {
+                "name": "_build_ui",
+                "qualified name": "MiniDesktopApp._build_ui",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_populate_files": {
+                "name": "_populate_files",
+                "qualified name": "MiniDesktopApp._populate_files",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "path",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_open_folder": {
+                "name": "_open_folder",
+                "qualified name": "MiniDesktopApp._open_folder",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_refresh": {
+                "name": "_refresh",
+                "qualified name": "MiniDesktopApp._refresh",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_on_file_open": {
+                "name": "_on_file_open",
+                "qualified name": "MiniDesktopApp._on_file_open",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "event",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_save_file": {
+                "name": "_save_file",
+                "qualified name": "MiniDesktopApp._save_file",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_load_file": {
+                "name": "_load_file",
+                "qualified name": "MiniDesktopApp._load_file",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_draw": {
+                "name": "_draw",
+                "qualified name": "MiniDesktopApp._draw",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "event",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_log": {
+                "name": "_log",
+                "qualified name": "MiniDesktopApp._log",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "msg",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "_tick_clock": {
+                "name": "_tick_clock",
+                "qualified name": "MiniDesktopApp._tick_clock",
+                "module name": "dubslib.mockclasses.mock_tkinter",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            }
+        },
+        "property": {},
+        "instance": {}
+    }
+}

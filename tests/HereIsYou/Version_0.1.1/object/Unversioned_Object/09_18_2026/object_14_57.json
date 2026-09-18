@@ -1,0 +1,15 @@
+{
+    "name": "object",
+    "qualified name": "object",
+    "module name": "builtins",
+    "bases": [],
+    "doc string": "The base class of the class hierarchy.\n\nWhen called, it accepts no arguments and returns a new featureless\ninstance that has no instance attributes and cannot be given any.\n",
+    "children": {
+        "module": {},
+        "class": {},
+        "method": {},
+        "function": {},
+        "property": {},
+        "instance": {}
+    }
+}

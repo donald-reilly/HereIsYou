@@ -1,0 +1,334 @@
+{
+    "name": "GoldenClass",
+    "qualified name": "GoldenClass",
+    "module name": "dubslib.mockclasses.mock_custom_classes",
+    "bases": [
+        "<class 'dubslib.mockclasses.mock_custom_classes.GoldenBase'>"
+    ],
+    "doc string": "A fully loaded class for introspection testing.",
+    "type hints": {
+        "another_class_variable": "<class 'int'>"
+    },
+    "children": {
+        "module": {},
+        "class": {
+            "Nested": {
+                "name": "Nested",
+                "qualified name": "GoldenClass.Nested",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "doc string": "Nested class inside GoldenClass.",
+                "type hints": {},
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "nested_method": {
+                            "name": "nested_method",
+                            "qualified name": "GoldenClass.Nested.nested_method",
+                            "module name": "dubslib.mockclasses.mock_custom_classes",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        },
+        "method": {},
+        "function": {
+            "__init__": {
+                "name": "__init__",
+                "qualified name": "GoldenClass.__init__",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": null,
+                "type hints": {
+                    "x": "<class 'int'>",
+                    "y": "<class 'str'>"
+                },
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "x",
+                        "default": 5,
+                        "type": "<class 'int'>"
+                    },
+                    {
+                        "name": "y",
+                        "default": "hello",
+                        "type": "<class 'str'>"
+                    }
+                ]
+            },
+            "method_one": {
+                "name": "method_one",
+                "qualified name": "GoldenClass.method_one",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": "This is method one",
+                "type hints": {
+                    "param2": "<class 'int'>",
+                    "return": "<class 'str'>"
+                },
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "param1",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "param2",
+                        "default": 10,
+                        "type": "<class 'int'>"
+                    }
+                ]
+            },
+            "method_two": {
+                "name": "method_two",
+                "qualified name": "GoldenClass.method_two",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": "Method with complex signature",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "a",
+                        "default": null,
+                        "type": null
+                    },
+                    {
+                        "name": "b",
+                        "default": 3,
+                        "type": null
+                    }
+                ]
+            },
+            "create_nested": {
+                "name": "create_nested",
+                "qualified name": "GoldenClass.create_nested",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": "Returns an instance of the nested class.",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            },
+            "lambda_factory": {
+                "name": "lambda_factory",
+                "qualified name": "GoldenClass.lambda_factory",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": "Returns a lambda function.",
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            }
+        },
+        "property": {
+            "my_property": {
+                "doc string": "This is a property",
+                "getter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "dubslib.mockclasses.mock_custom_classes",
+                    "doc string": "This is a property",
+                    "type hints": {
+                        "return": "<class 'str'>"
+                    },
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
+                        }
+                    ]
+                },
+                "setter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "dubslib.mockclasses.mock_custom_classes",
+                    "doc string": "Setter for my_property",
+                    "type hints": {
+                        "value": "<class 'str'>",
+                        "other_value": "<class 'str'>",
+                        "return": null
+                    },
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
+                        },
+                        {
+                            "name": "value",
+                            "default": "that",
+                            "type": "<class 'str'>"
+                        },
+                        {
+                            "name": "other_value",
+                            "default": "this",
+                            "type": "<class 'str'>"
+                        }
+                    ]
+                },
+                "deleter": {
+                    "name": "my_property",
+                    "qualified name": "GoldenClass.my_property",
+                    "module name": "dubslib.mockclasses.mock_custom_classes",
+                    "doc string": "Deleter for my_property",
+                    "type hints": {
+                        "return": null
+                    },
+                    "variables": [
+                        {
+                            "name": "self",
+                            "default": null,
+                            "type": null
+                        }
+                    ]
+                }
+            }
+        },
+        "instance": {
+            "descriptor_field": {
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": "Simple descriptor to test descriptor behavior.",
+                "type hints": {},
+                "Instance Variables": {
+                    "name": "descriptor_field"
+                },
+                "name": "DescriptorExample",
+                "qualified name": "DescriptorExample",
+                "bases": [
+                    "<class 'object'>"
+                ],
+                "children": {
+                    "module": {},
+                    "class": {},
+                    "method": {},
+                    "function": {
+                        "__init__": {
+                            "name": "__init__",
+                            "qualified name": "DescriptorExample.__init__",
+                            "module name": "dubslib.mockclasses.mock_custom_classes",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "name",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__get__": {
+                            "name": "__get__",
+                            "qualified name": "DescriptorExample.__get__",
+                            "module name": "dubslib.mockclasses.mock_custom_classes",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "owner",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__set__": {
+                            "name": "__set__",
+                            "qualified name": "DescriptorExample.__set__",
+                            "module name": "dubslib.mockclasses.mock_custom_classes",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "value",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        },
+                        "__delete__": {
+                            "name": "__delete__",
+                            "qualified name": "DescriptorExample.__delete__",
+                            "module name": "dubslib.mockclasses.mock_custom_classes",
+                            "doc string": null,
+                            "type hints": {},
+                            "variables": [
+                                {
+                                    "name": "self",
+                                    "default": null,
+                                    "type": null
+                                },
+                                {
+                                    "name": "instance",
+                                    "default": null,
+                                    "type": null
+                                }
+                            ]
+                        }
+                    },
+                    "property": {},
+                    "instance": {}
+                }
+            }
+        }
+    }
+}

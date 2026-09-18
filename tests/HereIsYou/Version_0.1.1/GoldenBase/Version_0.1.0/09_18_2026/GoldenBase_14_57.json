@@ -1,0 +1,33 @@
+{
+    "name": "GoldenBase",
+    "qualified name": "GoldenBase",
+    "module name": "dubslib.mockclasses.mock_custom_classes",
+    "bases": [
+        "<class 'object'>"
+    ],
+    "doc string": "Base class to test inheritance.",
+    "type hints": {},
+    "children": {
+        "module": {},
+        "class": {},
+        "method": {},
+        "function": {
+            "base_method": {
+                "name": "base_method",
+                "qualified name": "GoldenBase.base_method",
+                "module name": "dubslib.mockclasses.mock_custom_classes",
+                "doc string": null,
+                "type hints": {},
+                "variables": [
+                    {
+                        "name": "self",
+                        "default": null,
+                        "type": null
+                    }
+                ]
+            }
+        },
+        "property": {},
+        "instance": {}
+    }
+}
