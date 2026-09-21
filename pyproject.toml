@@ -10,7 +10,36 @@ readme = "README.md"
 license = { text = "MIT" }
 authors = [{ name = "Donald Reilly", email = "donald.reilly.jr@outlook.com" }]
 dependencies = []
-classifiers = ["Development Status :: 2 - Pre-Alpha"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Programming Language :: Python :: 3.1",
+    "Programming Language :: Python :: 3.2",
+    "Programming Language :: Python :: 3.3",
+    "Programming Language :: Python :: 3.4",
+    "Programming Language :: Python :: 3.5",
+    "Programming Language :: Python :: 3.6",
+    "Programming Language :: Python :: 3.7",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Topic :: Documentation",
+    "Topic :: File Formats :: JSON",
+    "Topic :: Education :: Testing",
+    "Topic :: Office/Business",
+    "Topic :: Security",
+    "Topic :: Software Development :: Debuggers",
+    "Topic :: Software Development :: Documentation",
+    "Topic :: Software Development :: Testing",
+    "Topic :: Software Development :: Testing :: Unit",
+    "Topic :: Software Development :: Version Control",
+    "Topic :: System :: Logging",
+    "Topic :: Utilities"
+    ]
 
 [tool.setuptools.packages.find]
 where = ["src"]
