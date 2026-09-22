@@ -1,6 +1,4 @@
 
-from pprint import pprint
-
 class Parser:
     """
     Parser: Extracts meta data from python objects.
