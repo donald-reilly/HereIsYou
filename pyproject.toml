@@ -6,10 +6,11 @@ build-backend = "setuptools.build_meta"
 name = "HereIsYou"
 version = "0.1.1"
 description = "BInspected is a Python package for deep runtime introspection of Python objects, exposing constructor signatures, default values, annotations, docstrings, and structural metadata for modules, classes, functions, methods, and properties."
+
 readme = "README.md"
-license = { text = "MIT" }
-authors = [{ name = "Donald Reilly", email = "donald.reilly.jr@outlook.com" }]
-dependencies = []
+
+authors = [{ name = "Donald Raymond Reilly Jr.", email = "donald.reilly.jr@outlook.com" }]
+
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3.1",

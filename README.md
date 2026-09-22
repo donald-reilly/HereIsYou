@@ -63,4 +63,4 @@ Nothing setup or planned for contributions as this is strictly for my own person
 
 ## License
 
-MIT license
+[GNU GENERAL PUBLIC LICENSE Version 3](./LICENSE)
